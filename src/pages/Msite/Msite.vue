@@ -310,7 +310,19 @@
 
 <script>
   import HeaderTop from '../../componets/HeaderTop/HeaderTop'
+  import Swiper from 'swiper'
+  import 'swiper/dist/css/swiper.min.css'
     export default {
+        mounted () {
+          //创建一个swiper实列对象，实现轮播
+          new Swiper('.swiper-container',{
+            loop: true,//是否循环播放
+            //是否需要分页器
+            pagination: {
+              el: '.swiper-pagination',
+            },
+          })
+        },
         components: {
           HeaderTop
         }

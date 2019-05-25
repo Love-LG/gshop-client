@@ -2,7 +2,7 @@
   <section class="profile">
     <HeaderTop title="我的"/>
     <section class="profile-number">
-      <a href="javascript:" class="profile-link">
+      <router-link to="/login" class="profile-link">
         <div class="profile_image">
           <i class="iconfont icon-person"></i>
         </div>
@@ -16,9 +16,9 @@
           </p>
         </div>
         <span class="arrow">
-              <i class="iconfont icon-jiantou1"></i>
-            </span>
-      </a>
+          <i class="iconfont icon-jiantou1"></i>
+        </span>
+      </router-link>
     </section>
     <section class="profile_info_data border-1px">
       <ul class="info_data_list">
@@ -93,9 +93,11 @@
 
 <script>
   import HeaderTop from '../../componets/HeaderTop/HeaderTop'
+  import Login from '../Login/Login'
   export default {
     components: {
-      HeaderTop
+      HeaderTop,
+      Login
     }
   }
 </script>
@@ -104,6 +106,7 @@
   @import "../../common/stylus/mixins.styl"
   .profile //我的
     width 100%
+    overflow hidden
     .header
       background-color #02a774
       position fixed

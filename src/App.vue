@@ -7,12 +7,11 @@
 
 <script>
   import FooterGuide from './componets/FooterGuide/FooterGuide.vue'
-  import {reqFoodType} from './api'
+
     export default {
         // 测试接口
-        async mounted () {
-          const result = await reqFoodType()
-          console.log(result)
+        mounted () {
+          this.$store.dispatch('getCategorys')
         },
         components: {
           FooterGuide

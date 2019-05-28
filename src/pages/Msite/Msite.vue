@@ -54,6 +54,7 @@
         mounted () {
 
           this.$store.dispatch('getCategorys')
+          this.$store.dispatch('getShops')
 
           // //创建一个swiper实列对象，实现轮播
           // new Swiper('.swiper-container',{
